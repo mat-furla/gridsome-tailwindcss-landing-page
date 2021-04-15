@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Header */
+.header {
+  @apply text-5xl tracking-tighter font-display lg:text-7xl dark:text-gray-100;
+}
+.section-header {
+  @apply text-base tracking-wide uppercase font-display;
+}
+.section-subheader {
+  @apply text-3xl tracking-tighter font-display lg:text-5xl dark:text-gray-100;
+}
+
+.navbar-menu-link-item{
+  @apply flex items-start p-3 -m-3 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.cta-button{
+  @apply px-10 py-5 transition duration-500 ease-in-out transform rounded-md whitespace-nowrap hover:shadow-xl hover:-translate-y-1;
+}
+
+.cta-mobile-button {
+  @apply flex items-center justify-center w-full px-4 py-3 rounded-md;
+}

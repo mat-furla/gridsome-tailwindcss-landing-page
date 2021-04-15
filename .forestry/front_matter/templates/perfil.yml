@@ -1,0 +1,36 @@
+---
+label: Perfil
+hide_body: true
+display_field: name
+fields:
+- type: text
+  name: id
+  label: ID
+  description: Identificador do perfil, um nome em letras minúsculas
+  config:
+    required: true
+  default: lorem
+- type: text
+  name: name
+  label: Nome
+  config:
+    required: true
+  default: Lorem Ipsum
+- type: text
+  name: description
+  label: Descrição
+  config:
+    required: true
+  default: Lorem ipsum lorem ipsum
+- type: text
+  name: social
+  label: LinkedIn
+  description: URL do perfil do LInkedIn
+  config:
+    required: true
+  default: https://linkedin.com/
+- type: file
+  name: image
+  label: Foto
+  config:
+    maxSize: 2

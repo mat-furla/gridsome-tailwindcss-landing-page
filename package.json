@@ -1,0 +1,48 @@
+{
+  "name": "gridsome-tailwindcss-landing-page",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@fontsource/dm-sans": "^4.2.2",
+    "@fontsource/poppins": "^4.2.2",
+    "gridsome": "^0.7.23",
+    "vue-feather-icons": "^5.1.0",
+    "vue-scrollto": "^2.20.0",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-social-sharing": "^3.0.7",
+    "vue-typer": "^1.2.0"
+  },
+  "devDependencies": {
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "@gridsome/vue-remark": "^0.2.6",
+    "@tailwindcss/typography": "^0.4.0",
+    "@vue/eslint-config-standard": "^6.0.0",
+    "autoprefixer": "^10.0.4",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-gridsome": "^1.6.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "gridsome-plugin-robots-txt": "^1.0.2",
+    "gridsome-plugin-svg": "^0.0.14",
+    "postcss": "^8.1.14",
+    "prettier": "^2.2.1",
+    "tailwindcss": "^2.0.1",
+    "vue-eslint-parser": "^7.6.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
+}

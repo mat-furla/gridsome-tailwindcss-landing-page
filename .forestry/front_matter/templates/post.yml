@@ -1,0 +1,48 @@
+---
+label: Post
+hide_body: false
+display_field: title
+fields:
+- type: datetime
+  name: date
+  label: Data
+  config:
+    date_format: DD/MM/YYYY
+    export_format: YYYY-MM-DD
+    required: true
+  default: now
+- type: text
+  name: title
+  label: Título
+  config:
+    required: true
+  default: Lorem Ipsum
+- type: text
+  name: author
+  label: Autor
+  description: ID do Perfil, precisa existir antes do post ser criado
+  config:
+    required: true
+  default: guilherme
+- type: field_group
+  name: image
+  label: Imagem
+  fields:
+  - type: file
+    name: path
+    label: Arquivo
+    config:
+      maxSize: 2
+  - type: text
+    name: alt
+    label: Nome da Imagem
+    config:
+      required: true
+    default: lorem
+- type: list
+  name: tags
+  label: Tags
+  config:
+    use_select: false
+    source:
+      type: simple
