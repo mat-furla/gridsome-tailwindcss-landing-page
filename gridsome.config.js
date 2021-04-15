@@ -17,35 +17,41 @@ module.exports = {
       }
     }
   },
-  prefetch: { mask: '^$' },
   templates: {
     Post: '/blog/:year/:month/:day/:title',
-    Tag: '/tag/:id'
+    Profile: [
+      {
+        path: '/profile/:id',
+        component: '@/templates/Profile.vue'
+      }
+    ],
+    Tag: [
+      {
+        path: '/tag/:id',
+        component: '@/templates/Tag.vue'
+      }
+    ]
   },
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Profile',
+        path: 'content/profiles/*.md'
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
         path: 'content/posts/**/*.md',
         refs: {
-          author: {
-            typeName: 'Profile'
-          },
+          author: 'Profile',
           tags: {
             typeName: 'Tag',
             create: true
           }
         }
-      }
-    },
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Profile',
-        baseDir: 'content/profiles',
-        template: 'src/templates/Profile.vue',
-        route: '/profile/:id'
       }
     },
     {
